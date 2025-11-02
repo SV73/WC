@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AIML TE 27</title>
+</head>
+<body>
+    <h1>MY WEBPAGE</h1>
+
+    <h2>LIST</h2>
+    <h2>My Hobbies</h2>
+    <ol>
+        <li>Coding</li>
+        <li>Traveling</li>
+        <li>Cycling</li>
+        <li>Music</li>
+    </ol>
+    <hr>
+
+    <h2>TABLE</h2>
+    <table border="1">
+        <tr>
+            <th>COURSE</th>
+            <th>BRANCH</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>AIML</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>COMPS</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>IT</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2>LINKS</h2>
+    <p>Link to my college website:</p>
+    <a href="https://universalcollegeofengineering.edu.in/">College Website Link</a>
+    <hr>
+
+    <h2>IMAGE</h2>
+    <img src="AI.jpg" width="300" alt="AI Image">
+    <hr>
+</body>
+</html>
