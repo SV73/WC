@@ -1,0 +1,97 @@
+A)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Background Color</title>
+</head>
+<body>
+    <h1>Click the button to change the background color!</h1>
+    <button id="colorButton">Change color</button>
+
+    <script>
+        const colorButton = document.getElementById('colorButton');
+        colorButton.addEventListener('click', function() {
+            const randomColor = '#' + Math.floor(Math.random() * 16777215)
+                .toString(16)
+                .padStart(6, '0');
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+
+    <p><strong>SAKETH SAMALA TE/AIML-D2-99</strong></p>
+</body>
+</html>
+
+B)
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List Example</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 8px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Shopping List</h1>
+
+    <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button>Add item</button>
+    </div>
+
+    <ul></ul>
+
+    <script>
+        const list = document.querySelector("ul");
+        const input = document.getElementById('item');
+        const btn = document.querySelector("button");
+
+        input.focus();
+
+        const addItem = () => {
+            // get text entered by the user in the input field
+            let item = input.value.trim();
+            if (item === "") return;
+
+            // clear contents of the input field
+            input.value = '';
+
+            // create a list item (li), a span, and a button
+            const li = document.createElement('li');
+            const span = document.createElement('span');
+            const deleteButton = document.createElement('button');
+
+            // append span and button as children to li
+            li.appendChild(span);
+            li.appendChild(deleteButton);
+
+            // set text content of span to value of item variable
+            span.textContent = item;
+
+            // set delete button's label as "Delete"
+            deleteButton.textContent = 'Delete';
+
+            // append li as child to list object
+            list.appendChild(li);
+
+            // define onclick handler for delete button
+            deleteButton.onclick = function() {
+                list.removeChild(li);
+            }
+        };
+
+        btn.onclick = addItem;
+    </script>
+</body>
+</html>
