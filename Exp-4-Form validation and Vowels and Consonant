@@ -1,0 +1,121 @@
+A)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (username.trim() === "") {
+                alert("Username cannot be blank!");
+                return false;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address (e.g., example@domain.com).");
+                return false;
+            }
+
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+B)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel and Consonant Printer</title>
+</head>
+<body>
+    <h1>Vowel and Consonant Printer</h1>
+    <p>Enter a string, and the vowels will be printed first, followed by the consonants.</p>
+
+    <div>
+        <input type="text" id="inputString" placeholder="Enter a string...">
+        <button id="runButton">Print Vowels & Consonants</button>
+    </div>
+
+    <div>
+        <pre id="output"></pre>
+    </div>
+
+    <script>
+        function printVowelsAndConsonants(str) {
+            const vowels = "aeiouAEIOU";
+            let vowelList = [];
+            let consonantList = [];
+
+            for (const char of str) {
+                if (/[a-zA-Z]/.test(char)) {
+                    if (vowels.includes(char)) {
+                        vowelList.push(char);
+                    } else {
+                        consonantList.push(char);
+                    }
+                }
+            }
+
+            let outputText = "Vowels:\n";
+            outputText += vowelList.join('\n');
+            outputText += "\n\nConsonants:\n";
+            outputText += consonantList.join('\n');
+
+            return outputText;
+        }
+
+        const inputStringElement = document.getElementById("inputString");
+        const runButton = document.getElementById("runButton");
+        const outputElement = document.getElementById("output");
+
+        const handlePrint = () => {
+            const input = inputStringElement.value;
+            if (input.trim() === "") {
+                outputElement.textContent = "Please enter a non-empty string.";
+                return;
+            }
+            outputElement.textContent = printVowelsAndConsonants(input);
+        };
+
+        runButton.addEventListener("click", handlePrint);
+        inputStringElement.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                handlePrint();
+            }
+        });
+
+        window.addEventListener('load', handlePrint);
+    </script>
+</body>
+</html>
