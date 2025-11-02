@@ -1,0 +1,229 @@
+Exp-1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AIML TE 27</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #34495e;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 50%;
+      margin-top: 10px;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #000;
+      text-align: center;
+      padding: 8px;
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MY WEBPAGE</h1>
+  <h2>LIST</h2>
+  <h2>My Hobbies</h2>
+
+  <ol>
+    <li>Coding</li>
+    <li>Traveling</li>
+    <li>Cycling</li>
+    <li>Music</li>
+  </ol>
+  <hr>
+
+  <h2>TABLE</h2>
+  <table>
+    <tr>
+      <th>COURSE</th>
+      <th>BRANCH</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>AIML</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>COMPS</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>IT</td>
+    </tr>
+  </table>
+
+  <h2>LINKS</h2>
+  <p>Link to my college website</p>
+  <a href="https://universalcollegeofengineering.edu.in/" target="_blank">
+    College Website Link
+  </a>
+  <hr>
+
+  <h2>IMAGE</h2>
+  <img src="AI.jpg" alt="AI related image" width="300">
+  <hr>
+
+</body>
+</html>
+
+Exp-2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      padding: 20px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .form-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #16a085;
+      color: white;
+    }
+
+    button[type="reset"] {
+      background-color: #e74c3c;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>User Registration Form</h1>
+
+  <form action="#" method="POST">
+    <!-- Text Field -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+    <!-- Password Field -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+    <!-- Date Field -->
+    <label for="birthdate">Date of Birth:</label>
+    <input type="date" id="birthdate" name="birthdate" required>
+
+    <!-- Dropdown -->
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- Radio Buttons -->
+    <label>Preferred Contact Method:</label>
+    <input type="radio" id="email" name="contact_method" value="email">
+    <label for="email">Email</label>
+
+    <input type="radio" id="phone" name="contact_method" value="phone">
+    <label for="phone">Phone</label>
+
+    <!-- Checkbox -->
+    <label>
+      <input type="checkbox" id="agree" name="agree">
+      I agree to the terms and conditions
+    </label>
+
+    <!-- Textarea -->
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments or suggestions"></textarea>
+
+    <!-- Submit and Reset Buttons -->
+    <div class="form-buttons">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+</body>
+</html>
