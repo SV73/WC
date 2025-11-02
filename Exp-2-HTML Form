@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Example</title>
+</head>
+<body>
+    <h1>User Registration Form</h1>
+
+    <form action="#" method="POST">
+        <!-- Text Field -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <br><br>
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <br><br>
+
+        <!-- Date Field -->
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        <br><br>
+
+        <!-- Dropdown -->
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <!-- Radio Buttons -->
+        <label>Preferred Contact Method:</label><br>
+        <input type="radio" id="email" name="contact_method" value="email">
+        <label for="email">Email</label><br>
+
+        <input type="radio" id="phone" name="contact_method" value="phone">
+        <label for="phone">Phone</label>
+        <br><br>
+
+        <!-- Checkbox -->
+        <label>
+            <input type="checkbox" id="agree" name="agree"> I agree to the terms and conditions
+        </label>
+        <br><br>
+
+        <!-- Student Info -->
+        <p><strong>SAKETH SAMALA TE/AIML-D2-99</strong></p>
+
+        <!-- Textarea -->
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments or suggestions"></textarea>
+        <br><br>
+
+        <!-- Submit and Reset Buttons -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
